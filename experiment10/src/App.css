@@ -1,0 +1,151 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f2f5ff;
+  color: #1e1e2d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef2ff;
+}
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.app-shell {
+  width: min(100%, 900px);
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(33, 43, 84, 0.08);
+  border: 1px solid #e8ebff;
+  padding: 20px;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: #1c2f5c;
+}
+
+.card p {
+  margin: 8px 0 18px;
+  color: #4e5470;
+  font-size: 0.95rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.field input {
+  border-radius: 8px;
+  border: 1px solid #cbd2e0;
+  padding: 9px 11px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.field input:focus {
+  outline: 2px solid #7b8dff;
+  border-color: #7b8dff;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0 16px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-btn {
+  background: #2f56ff;
+  color: #fff;
+  padding: 9px 14px;
+}
+
+.delete-btn {
+  background: #ff4e4c;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: inherit;
+}
+
+thead th {
+  text-align: left;
+  padding: 10px 8px;
+  background: #f2f5ff;
+  border-bottom: 2px solid #d7def4;
+  color: #2d3f70;
+}
+
+tbody td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #edf0f8;
+  color: #2f344f;
+}
+
+.empty {
+  margin: 14px 0;
+  color: #5c5f76;
+  background: #f6f7ff;
+  border: 1px dashed #d7dcf4;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .card {
+    padding: 14px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 8px 6px;
+  }
+}
