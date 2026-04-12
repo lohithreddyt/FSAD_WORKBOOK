@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "John Doe", "email": "john@gmail.com", "phone": "9876543210" },
+  { "id": 2, "name": "Jane Smith", "email": "jane@gmail.com", "phone": "9123456780" },
+  { "id": 3, "name": "Sam Wilson", "email": "sam@gmail.com", "phone": "9988776655" },
+  { "id": 4, "name": "Chris Evans", "email": "chris@gmail.com", "phone": "9871234560" },
+  { "id": 5, "name": "Tony Stark", "email": "tony@gmail.com", "phone": "9001122334" }
+]
