@@ -1,0 +1,47 @@
+package com.example.backend.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.backend.entity.User;
+import com.example.backend.repository.UserRepository;
+
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/api/users")
+public class UserController {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    // Register API
+    @PostMapping("/register")
+    public User registerUser(@RequestBody User user) {
+        return userRepository.save(user);
+    }
+
+    // Login API
+    @PostMapping("/login")
+    public User loginUser(@RequestBody User user) {
+
+        User existingUser =
+                userRepository.findByUsername(user.getUsername());
+
+        if (existingUser != null &&
+            existingUser.getPassword()
+            .equals(user.getPassword())) {
+
+            return existingUser;
+        }
+
+        return null;
+    }
+
+    // Profile API
+    @GetMapping("/{username}")
+    public User getUserProfile(
+            @PathVariable String username) {
+
+        return userRepository.findByUsername(username);
+    }
+}
